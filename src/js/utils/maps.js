@@ -1,7 +1,7 @@
-export default function map() {
-    try {
-        throw new Error('Map exception');
-    } catch (error) {
-        console.log(error);
-    }
+/* Google maps initilization and options */
+export default function Map() {
+    throw new Error({
+        name: 'Map error',
+        message: 'Cannot init map'
+    });
 }

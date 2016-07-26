@@ -1,3 +1,7 @@
 const jQuery = require('jquery');
-import css from '../style/main.scss';
+import map from './utils/maps.js';
 import './materialize.js';
+
+import css from '../style/main.scss';
+
+google.maps.event.addDomListener(window, 'load', map);
