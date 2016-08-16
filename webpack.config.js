@@ -58,7 +58,10 @@ if (TARGET === 'start' || !TARGET) {
             progress: true,
             stats: 'errors-only',
             contentBase: './dist/',
-
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:8080',
+                'Access-Control-Allow-Credentials': 'true'
+            },
 			// host and port are from env
             host: process.env.HOST,
             port: process.env.PORT

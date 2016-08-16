@@ -1,4 +1,23 @@
-/* Main styles */
-
 @import 'materialize.scss';
 @import '_map.scss';
+
+/* Main styles */
+
+h1 {
+    font-size: 22px;
+}
+
+#location-list {
+    height: 380px;
+    position: absolute;
+    top: 50px;
+    border: 4px solid #dedede;
+    background-color: white;
+    opacity: .7;
+    overflow-y: scroll;
+    li {
+        border: 4px solid #dedede;
+        margin: 1px;
+        padding: 1px;
+    }
+}

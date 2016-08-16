@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    <nav class="light-blue lighten-1" role="navigation">
+    <!-- <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
           </ul>
-
           <ul id="nav-mobile" class="side-nav">
             <li><a href="#">Navbar Link</a></li>
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-    </nav>
+    </nav> -->
 
     <!--   Google maps container   -->
     <section class="google-maps-container">
-      <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <div id="map" class="col 12">
-                meow
-            </div>
+        <div id="map">
         </div>
-      </div>
     </section>
 
-    <div class="container">
-        <div class="section">
-          <div class="row">
-          </div>
+    <section class="list-view">
+        <div class="row">
+            <div id="location-list" class="col s4 offset-s1 z-depth-3">
+                <h1>Toronto Locations</h1>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+                <ul data-bind="foreach: places">
+                    <li>
+                        Name: <span data-bind="text: name"></span>
+                        <br />
+                        Latitude: <span data-bind="text: lat"></span>
+                        <br />
+                        Longitude: <span data-bind="text: lon"></span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    <br><br>
+    </section>
 
-    <div class="section">
-
-    </div>
-  </div>
-
-    <footer class="page-footer orange">
+    <!-- <footer class="page-footer orange">
         <div class="container">
             <div class="row">
              </div>
@@ -55,10 +59,9 @@
                 Made by <a class="orange-text text-lighten-3" target="_blank" href="http://www.albertoalopez.co">Alberto Lopez</a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
-
-  <!--  Scripts-->
+    <!--  Scripts -->
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="bundle.js"></script>

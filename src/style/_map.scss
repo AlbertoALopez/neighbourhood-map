@@ -1,7 +1,10 @@
 /* Google map styling */
 
 #map {
-    height: 200px;
-    width: auto;
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
     margin: 0 auto;
 }
