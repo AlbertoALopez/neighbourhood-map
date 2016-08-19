@@ -15,15 +15,21 @@
     </section>
 
     <!-- Location list -->
-    <section class="list-view">
-        <div class="row">
-            <div id="location-list" class="col s4 m3 l3 z-depth-3">
+    <section class="location-list">
+        <div id="location-filter" class="row">
+            <div class="title col s6">
                 <h1>Toronto Locations</h1>
+            </div>
+            <div class="col s6">
                 <div class="input-field">
                     <input id="search" type="search" required>
                     <label for="search"><i class="material-icons">search</i></label>
                     <i class="material-icons">close</i>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="location-list" class="col s4 m3 l3 z-depth-3">
                 <ul data-bind="foreach: locations">
                     <li>
                         <span class="location-name" data-bind="text: name"></span>

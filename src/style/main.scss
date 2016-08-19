@@ -3,15 +3,30 @@
 
 /* Main styles */
 
+p {
+    font-size: 16px;
+}
+
 h1 {
     font-size: 22px;
+}
+
+#location-filter {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    .title {
+        border: 4px solid #dedede;
+        opacity: .7;
+        background-color: white;
+    }
 }
 
 #location-list {
     height: 380px;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 80px;
     border: 4px solid #dedede;
     background-color: white;
     opacity: .7;
@@ -23,5 +38,15 @@ h1 {
     }
     .location-name {
         font-weight: bold;
+    }
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+    #location-list {
+        height: 200px;
+        top: 95px;
     }
 }
