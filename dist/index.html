@@ -32,7 +32,9 @@
             <div id="location-list" class="col s4 m3 l3 z-depth-3">
                 <ul data-bind="foreach: searchResults">
                     <li>
-                        <span class="location-name" data-bind="text: name"></span>
+                        <a href="#" data-bind="click: $root.clickHandler">
+                            <span class="location-name" data-bind="text: name"></span>
+                        </a>
                     </li>
                 </ul>
             </div>
