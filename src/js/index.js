@@ -1,4 +1,3 @@
-import map from './utils/maps.js';
 import ko from 'knockout';
 import appViewModel from './viewmodel/viewmodel.js';
 import './materialize.js';

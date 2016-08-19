@@ -1,6 +1,6 @@
 import ko from 'knockout';
 
-// Initialize google map
+// Google map initialization
 const mapCenter = new google.maps.LatLng(43.7181557,-79.5181427);
 
 const mapOptions = {
@@ -92,6 +92,8 @@ function MapLocation(jsonObj) {
     self.infoWindow.addListener('closeclick', self.infoWindowCloseClickHandler);
 }
 
+MapLocation.prototype.active = null;
+
 // Knockout view model
 export default function appViewModel() {
     const self = this;
@@ -100,7 +102,7 @@ export default function appViewModel() {
     self.loadingMsg = ko.observable('Loading locations...');
     self.isVisible = ko.observable(true);
 
-    // Function that toggles list view visibility
+    // Function that toggles location list visibility
     self.toggleVisibility = () => {
         self.isVisible(!self.isVisible());
     };
@@ -109,6 +111,27 @@ export default function appViewModel() {
     self.clickHandler = (location) => {
         location.focus();
     };
+
+    self.searchResults = ko.computed(() => {
+        const results = [];
+
+        const re = new RegExp(self.filter(), 'i');
+        self.locations().forEach((location) => {
+            if (location.name.search(re) !== -1) {
+                results.push(location);
+                location.mapMarker.setVisible(true);
+            }
+            else {
+                location.mapMarker.setVisible(false);
+
+                if (MapLocation.prototype.active === location) {
+                    location.deactivate();
+                }
+            }
+        });
+
+        return results;
+    });
 
     const jsonUrl = 'http://wx.toronto.ca/inter/culture/doorsopen.nsf/DoorsOpenBuildingJSON.xsp';
     $.ajax({
@@ -124,7 +147,6 @@ export default function appViewModel() {
         data.forEach((object) => {
             location = new MapLocation(object);
             locations.push(location);
-            console.log(location.description);
 
             // Extend map bounds
             bounds.extend(location.mapMarker.position);

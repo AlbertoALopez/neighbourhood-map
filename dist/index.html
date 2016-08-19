@@ -22,7 +22,7 @@
             </div>
             <div class="col s6">
                 <div class="input-field">
-                    <input id="search" type="search" required>
+                    <input id="search" type="search" data-bind="textInput: filter, css: {visible: isVisible}" required>
                     <label for="search"><i class="material-icons">search</i></label>
                     <i class="material-icons">close</i>
                 </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="row">
             <div id="location-list" class="col s4 m3 l3 z-depth-3">
-                <ul data-bind="foreach: locations">
+                <ul data-bind="foreach: searchResults">
                     <li>
                         <span class="location-name" data-bind="text: name"></span>
                     </li>
