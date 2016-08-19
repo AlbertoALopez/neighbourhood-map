@@ -21,7 +21,7 @@ h1 {
         background-color: white;
     }
     .input-field {
-        
+
     }
 }
 
@@ -58,5 +58,11 @@ h1 {
     #location-list {
         height: 200px;
         top: 95px;
+    }
+}
+
+@media(min-width: 600px) {
+    #location-list {
+        top: 105px;
     }
 }
