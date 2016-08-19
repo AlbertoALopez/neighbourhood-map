@@ -29,14 +29,18 @@ function MapLocation(jsonObj) {
         title: self.name
     });
 
-    self.infoWindow = new google.maps.InfoWindow();
+    self.infoWindow = new google.maps.InfoWindow({
+        maxWidth: 200
+    });
 
     self.showInfoWindow = () => {
         if (!self.infoWindow.getContent()) {
             self.infoWindow.setContent('Loading content...');
             const content = `
+            <div class="info-window">
             <h3 class="info-title">${self.name}</h3>
-            <p class="info-description">${self.description}</p>`;
+            <p class="info-description">${self.description}</p>
+            </div>`;
             self.infoWindow.setContent(content);
         }
 

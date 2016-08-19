@@ -20,6 +20,9 @@ h1 {
         opacity: .7;
         background-color: white;
     }
+    .input-field {
+        
+    }
 }
 
 #location-list {
@@ -38,6 +41,13 @@ h1 {
     }
     .location-name {
         font-weight: bold;
+    }
+}
+
+.info-window {
+    max-height: 200px;
+    h3 {
+        font-size: 1.2em;
     }
 }
 
