@@ -1,6 +1,6 @@
 # Neighbourhood map with Google Maps API
 
-This project consumes a JSON API from Doors Open Toronto, a dataset of more than  130 architecturally, historically, culturally and socially significant buildings across the city. In combination with Google Maps, it plots these locations on an accesible map along with a searchable list of locations.
+This project consumes a JSON API from Doors Open Toronto, a dataset of more than  130 architecturally, historically, culturally and socially significant buildings across the city. In combination with Google Maps, it plots these locations on an accessible map along with a searchable list of locations.
 
 ## Features
 
