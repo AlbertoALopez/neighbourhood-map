@@ -98,7 +98,6 @@ if (TARGET === 'build' || TARGET === 'stats') {
         output: {
             path: PATHS.dist,
             filename: '[name].js',
-			// chunkFilename: '[chunkhash].js'
         },
         module: {
             loaders: [{
