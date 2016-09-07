@@ -133,7 +133,7 @@ export default function appViewModel() {
         return results;
     });
 
-    const jsonUrl = 'http://wx.toronto.ca/inter/culture/doorsopen.nsf/DoorsOpenBuildingJSON.xsp';
+    const jsonUrl = 'https://wx.toronto.ca/inter/culture/doorsopen.nsf/DoorsOpenBuildingJSON.xsp';
     $.ajax({
         url: jsonUrl,
         dataType: 'jsonp',
